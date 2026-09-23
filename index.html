@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a0b2e">
+  <meta name="description" content="Uma mensagem de aniversário para Marcela, do seu padrinho.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Para Marcela — 18 anos</title>
+  <style>
+    :root { color-scheme: dark; --gold:#e8c96c; --light:#f8ecc5; --bg:#1a0b2e; }
+    * { box-sizing:border-box; }
+    [hidden] { display:none !important; }
+    html,body { margin:0; min-height:100%; }
+    body { font-family:Montserrat,Arial,sans-serif; color:#f8f6fc; background:radial-gradient(ellipse at 50% 40%,#3c1d65,#190a2a 66%,#0d0417); }
+    #particles { position:fixed; inset:0; width:100%; height:100%; pointer-events:none; }
+    button { font:inherit; cursor:pointer; }
+    button:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+    .screen { position:relative; min-height:100svh; display:grid; place-items:center; padding:5rem 1rem 4rem; isolation:isolate; }
+    .intro { position:absolute; z-index:6; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:2rem; background:#1a0b2e; transition:opacity .5s ease,visibility .5s; }
+    .intro.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+    h1,h2,.highlight,.signature { font-family:Georgia,'Times New Roman',serif; }
+    h1 { color:var(--gold); font-size:clamp(2.5rem,9vw,4rem); margin:0 0 .6rem; }
+    .intro p { color:#d3c9d9; font-size:1.1rem; }
+    .button { border:0; border-radius:999px; background:linear-gradient(135deg,#f0d677,#b58a2c); color:#180925; font-weight:700; padding:.95rem 1.6rem; min-height:48px; margin-top:1.5rem; box-shadow:0 8px 24px #0006; }
+    .button:hover { filter:brightness(1.08); }
+    .progress { position:absolute; z-index:5; top:max(1.1rem,env(safe-area-inset-top)); left:5%; width:90%; display:flex; gap:.35rem; }
+    .progress span { flex:1; height:4px; border-radius:4px; background:#ffffff4d; }
+    .progress span.done,.progress span.current { background:var(--gold); }
+    .progress span.current { box-shadow:0 0 10px #e8c96ca8; }
+    .slides { width:min(100%,500px); position:relative; }
+    .slide { display:none; min-height:min(55svh,430px); max-height:calc(100svh - 9rem); overflow:auto; padding:clamp(1.5rem,5vw,3rem); border:1px solid #e8c96c55; border-radius:22px; background:#ffffff0c; box-shadow:0 18px 50px #0008; backdrop-filter:blur(10px); text-align:center; flex-direction:column; align-items:center; justify-content:center; animation:appear .45s ease both; }
+    .slide.active { display:flex; }
+    @keyframes appear { from { opacity:0; transform:translateY(18px) scale(.98); } to { opacity:1; transform:none; } }
+    h2 { color:var(--gold); font-size:clamp(1.8rem,6vw,2.4rem); line-height:1.18; margin:0 0 1.2rem; }
+    .slide p { font-size:clamp(1rem,3.6vw,1.15rem); line-height:1.65; margin:.45rem 0; }
+    .highlight { color:var(--light); font-size:1.23em; font-weight:bold; }
+    .signature { color:#ff9999; font-size:1.3rem !important; font-style:italic; margin-top:1rem !important; }
+    .restart { background:transparent; border:2px solid var(--gold); color:var(--gold); margin-top:1.5rem; }
+    .controls { position:absolute; z-index:4; bottom:max(1.1rem,env(safe-area-inset-bottom)); display:flex; align-items:center; justify-content:space-between; width:min(90%,500px); gap:1rem; }
+    .nav { min-width:88px; min-height:44px; border:1px solid #e8c96c88; border-radius:999px; background:#201032; color:var(--light); }
+    .nav:disabled { opacity:.35; cursor:default; }
+    .counter { font-size:.9rem; color:#ded3e3; }
+    @media (max-height:550px) { .screen { padding-top:3.2rem; padding-bottom:3.7rem; } .slide { min-height:0; max-height:calc(100svh - 7.5rem); } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+  </style>
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <main class="screen">
+    <div class="intro" id="intro">
+      <h1>Para Marcela</h1>
+      <p>Uma mensagem especial pelos seus 18 anos</p>
+      <button class="button" id="open" type="button">Tocar para abrir</button>
+    </div>
+    <div class="progress" id="progress" aria-hidden="true" hidden></div>
+    <div class="slides" id="slides" aria-live="polite" hidden>
+      <section class="slide" aria-label="Mensagem 1 de 7">
+        <h2>Marcela, hoje você completa 18 anos! 🎉❤️</h2>
+        <p>Parece que foi ontem que você era aquela menininha...</p>
+        <p>E agora começa uma fase completamente nova da sua vida.</p>
+      </section>
+      <section class="slide" aria-label="Mensagem 2 de 7">
+        <p>Os 18 chegam trazendo mais <span class="highlight">liberdade</span>, <span class="highlight">escolhas</span> e <span class="highlight">responsabilidades</span>.</p>
+        <p>Mas, principalmente, trazem um mundo inteiro de possibilidades pela frente.</p>
+      </section>
+      <section class="slide" aria-label="Mensagem 3 de 7">
+        <p>Como seu padrinho, desejo que você tenha <strong>coragem</strong> para seguir seus próprios caminhos e <strong>sabedoria</strong> para fazer suas escolhas.</p>
+        <p>E, acima de tudo, nunca perca a sua essência.</p>
+      </section>
+      <section class="slide" aria-label="Mensagem 4 de 7">
+        <p>Que você sonhe grande, aproveite muito a vida...</p>
+        <p>Erre quando tiver que errar, aprenda, amadureça e seja <span class="highlight">muito feliz</span> em tudo aquilo que decidir construir.</p>
+      </section>
+      <section class="slide" aria-label="Mensagem 5 de 7">
+        <p>Saiba que, independentemente da idade e dos caminhos que a vida tomar...</p>
+        <p class="highlight">Você sempre poderá contar comigo.</p>
+      </section>
+      <section class="slide" aria-label="Mensagem 6 de 7">
+        <p>Tenho muito carinho por você e fico muito feliz de poder acompanhar mais esse momento da sua vida.</p>
+      </section>
+      <section class="slide" aria-label="Mensagem 7 de 7">
+        <h2>Feliz 18 anos, Marcela! 🥳</h2>
+        <p>Que essa nova fase seja cheia de coisas boas, conquistas, experiências inesquecíveis e muitos motivos para sorrir.</p>
+        <p class="signature">Um beijo enorme do seu padrinho! ❤️</p>
+        <button class="button restart" id="restart" type="button">Ler novamente ↺</button>
+      </section>
+    </div>
+    <nav class="controls" id="controls" aria-label="Navegação das mensagens" hidden>
+      <button class="nav" id="previous" type="button" aria-label="Mensagem anterior">← Voltar</button>
+      <span class="counter" id="counter"></span>
+      <button class="nav" id="next" type="button" aria-label="Próxima mensagem">Avançar →</button>
+    </nav>
+  </main>
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const progress = document.getElementById('progress');
+    const previous = document.getElementById('previous');
+    const next = document.getElementById('next');
+    const counter = document.getElementById('counter');
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    let current = 0;
+    let opened = false;
+    let particles = [];
+    let confetti = [];
+    let frame = 0;
+    progress.replaceChildren(...slides.map(() => document.createElement('span')));
+
+    function show(index) {
+      current = Math.max(0, Math.min(slides.length - 1, index));
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === current);
+        slide.setAttribute('aria-hidden', String(i !== current));
+        progress.children[i].className = i < current ? 'done' : i === current ? 'current' : '';
+      });
+      previous.disabled = current === 0;
+      next.disabled = current === slides.length - 1;
+      counter.textContent = `${current + 1} de ${slides.length}`;
+      if (current === slides.length - 1 && !reducedMotion.matches) celebrate();
+    }
+
+    document.getElementById('open').addEventListener('click', () => {
+      opened = true;
+      document.getElementById('intro').classList.add('hidden');
+      document.getElementById('slides').hidden = false;
+      document.getElementById('controls').hidden = false;
+      progress.hidden = false;
+      show(0);
+      if (!reducedMotion.matches) startParticles();
+      next.focus({preventScroll:true});
+    });
+    previous.addEventListener('click', () => show(current - 1));
+    next.addEventListener('click', () => show(current + 1));
+    document.getElementById('restart').addEventListener('click', () => { show(0); next.focus({preventScroll:true}); });
+    document.addEventListener('keydown', event => {
+      if (!opened) return;
+      if (event.key === 'ArrowRight') show(current + 1);
+      if (event.key === 'ArrowLeft') show(current - 1);
+    });
+    let touchX = 0;
+    document.getElementById('slides').addEventListener('touchstart', e => { touchX = e.changedTouches[0].screenX; }, {passive:true});
+    document.getElementById('slides').addEventListener('touchend', e => {
+      const delta = e.changedTouches[0].screenX - touchX;
+      if (Math.abs(delta) > 65) show(current + (delta < 0 ? 1 : -1));
+    }, {passive:true});
+
+    function resize() {
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      canvas.width = Math.round(innerWidth * dpr);
+      canvas.height = Math.round(innerHeight * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function startParticles() {
+      resize();
+      particles = Array.from({length:45}, () => ({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.6+.4,v:Math.random()*.5+.1,a:Math.random()*.45+.15}));
+      function draw() {
+        ctx.clearRect(0,0,innerWidth,innerHeight);
+        for (const p of particles) {
+          p.y -= p.v;
+          if (p.y < 0) { p.y = innerHeight; p.x = Math.random()*innerWidth; }
+          ctx.fillStyle = `rgba(232,201,108,${p.a})`;
+          ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
+        }
+        for (const p of confetti) { p.y += p.v; ctx.fillStyle = p.c; ctx.fillRect(p.x,p.y,p.r,p.r*1.6); }
+        confetti = confetti.filter(p => p.y < innerHeight);
+        frame = requestAnimationFrame(draw);
+      }
+      draw();
+    }
+    function celebrate() {
+      const colors = ['#e8c96c','#ff9999','#ffffff'];
+      confetti = Array.from({length:85}, () => ({x:Math.random()*innerWidth,y:-Math.random()*innerHeight,r:Math.random()*3+2,v:Math.random()*3+2,c:colors[Math.floor(Math.random()*colors.length)]}));
+    }
+    addEventListener('resize', resize);
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) { cancelAnimationFrame(frame); ctx.clearRect(0,0,innerWidth,innerHeight); }
+      else if (opened) startParticles();
+    });
+  </script>
+</body>
+</html>
